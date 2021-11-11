@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="login">
+    <h1>Predict the no of used bikes</h1>
+    <h3>Enter the following values to predict the no of used bikes</h3>
+    <form action="{{ url_for('predict') }}"method="post">
+        <input type="text" name="Bike name" placeholder="Bike name" required="required"/>
+        <input type="text" name="City" placeholder="City" required="required"/>
+        <input type="text" name="Kms driven" placeholder="Kms driven" required="required"/>
+        <input type="text" name="Owner" placeholder="Owner" required="required"/>
+        <input type="text" name="Age" placeholder="Age" required="required"/>
+        <input type="text" name="Power" placeholder="Power" required="required"/>
+        <input type="text" name="Brand" placeholder="Brand" required="required"/>
+        <button type="submit" class="btn">Predict</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {{ prediction_text }}
+</div>
+</body>
+</html>
